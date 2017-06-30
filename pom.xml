@@ -4,11 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
-	<artifactId>http-client</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>app</artifactId>
 	<packaging>jar</packaging>
 
-	<name>http-client</name>
+	<name>app</name>
 	<description>simple java http client service</description>
 
 	<parent>
@@ -42,6 +41,17 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<finalName>app</finalName>
+					<outputDirectory>.</outputDirectory>
+				</configuration>
+				<executions>
+        			<execution>	
+          				<goals>
+            				<goal>repackage</goal>
+          				</goals>
+        			</execution>
+      			</executions>
 			</plugin>
 		</plugins>
 	</build>
