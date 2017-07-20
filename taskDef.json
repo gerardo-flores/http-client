@@ -19,7 +19,12 @@
                     "containerPort":8900,
                     "hostPort": 8900
                 }
-            ]
+            ],
+             "environment" : [
+   				   { "name": "http_proxy","value": "http://c1184651648.saasprotection.com:8080"},
+   				   {"name": "https_proxy","value": "https://c1184651648.saasprotection.com:8080"}
+    			
+			]
         }
     ]
 }
