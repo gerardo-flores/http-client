@@ -1,25 +1,25 @@
 {
-    "family": "outage-http-client",
-    "containerDefinitions": [
-        {
-            "image": "991821860035.dkr.ecr.us-east-1.amazonaws.com/outage-http-client",
-            "name": "outage-http-client",
-            "cpu": 10,
-            "memory": 1024,
-            "essential": true,
-             "logConfiguration": {
-       					 "logDriver": "awslogs",
-       					 "options": {
-         								 "awslogs-group": "dev-outage-http-client-log",
-          								"awslogs-region": "us-east-1"
-        							}
-      					},
-            "portMappings": [
-                {
-                    "containerPort":8900,
-                    "hostPort": 8900
-                }
-            ]
-        }
-    ]
+	"family": "outage-http-client",
+	"containerDefinitions": [
+		{
+			"image": "991821860035.dkr.ecr.us-east-1.amazonaws.com/outage-http-client",
+			"name": "outage-http-client",
+			"cpu": 10,
+			"memory": 1024,
+			"essential": true,
+			"logConfiguration": {
+				"logDriver": "awslogs",
+				"options": {
+					"awslogs-group": "dev-outage-http-client-log",
+					"awslogs-region": "us-east-1"
+				}
+			},
+			"portMappings": [
+				{
+					"containerPort": 8900,
+					"hostPort": 8900
+				}
+			]
+		}
+	]
 }

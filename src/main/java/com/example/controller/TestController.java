@@ -12,10 +12,10 @@ import com.example.client.RestClient;
 @RestController
 public class TestController {
 
-	@EventListener(ContextRefreshedEvent.class)
-	void contextRefreshed(){
-		this.testGet("");
-	}
+//	@EventListener(ContextRefreshedEvent.class)
+//	void contextRefreshed(){
+//		this.testGet("");
+//	}
 	
 	@RequestMapping(value = "/get", method = RequestMethod.GET)
 	public Object testGet(@RequestParam(required = false) String uri) {
