@@ -21,6 +21,7 @@ public class RestClient {
 	public RestClient() {		
 		this.rest = new RestTemplate();
 		this.headers = new HttpHeaders();
+		this.readProxySettings();
 		headers.add("Content-Type", "application/json");
 		headers.add("Accept", "*/*");
 		
@@ -39,6 +40,13 @@ public class RestClient {
 
 	public void setStatus(HttpStatus status) {
 		this.status = status;
+	}
+	
+	public void readProxySettings(){
+		Properties props = System.getProperties();
+		String proxyServer = props.getProperty("http.proxyHost");
+		String proxyPort = props.getProperty("http.proxyPort");
+		System.out.println("The proxy server is set to: " + proxyServer + " " + proxyPort);
 	}
 	
 	public SimpleClientHttpRequestFactory requestFactory(){
