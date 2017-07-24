@@ -24,6 +24,6 @@ public class TestController {
 		Object output = client.get(requestUri);
 		System.out.println("CLIENT_STATUS_CODE:  " + client.getStatus());
 		System.out.println("CLIENT_OUTPUT:  " + output);
-		return output;
+		return client.getStatus().is2xxSuccessful() ? output : ("error response code: " + client.getStatus() + " " + client.getStatus().getReasonPhrase());
 	}
 }
